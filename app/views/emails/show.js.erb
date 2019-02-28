@@ -1,0 +1,12 @@
+
+
+
+function yourMomIsAWhore() {
+  let itbit = document.getElementById('email-body')
+  itbit.innerHTML = ""
+  itbit.innerHTML = "<%= j render 'email', email: @email %>"
+  let itboot = document.querySelector('#enveloppe_<%= @email.id %> > i');
+  itboot.classList.remove('fa-envelope')
+  itboot.classList.add('fa-envelope-open')
+}
+yourMomIsAWhore();
