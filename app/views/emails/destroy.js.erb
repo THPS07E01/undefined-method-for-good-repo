@@ -1,0 +1,4 @@
+$('.delete').bind('ajax:success', function() {
+  $("#email_<%=@email.id%>").fadeOut(1250);
+  $(this).closest('div').fadeOut(1250);
+})

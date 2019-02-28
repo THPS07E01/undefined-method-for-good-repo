@@ -5836,3 +5836,58 @@ Processing by EmailsController#show as JS
 Completed 200 OK in 19ms (Views: 8.2ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/emails/6" for 127.0.0.1 at 2019-03-01 00:22:45 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:74
+  [1m[36mCACHE Email Load (0.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:18
+  Rendering emails/show.js.erb
+  Rendered emails/_email.html.erb (0.7ms)
+  Rendered emails/show.js.erb (2.2ms)
+Completed 200 OK in 17ms (Views: 5.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/emails/8" for 127.0.0.1 at 2019-03-01 00:22:48 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"8"}
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:74
+  [1m[36mCACHE Email Load (0.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:18
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2019-02-28 23:22:48.892081"], ["id", 8]]
+  ↳ app/controllers/emails_controller.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:18
+  Rendering emails/show.js.erb
+  Rendered emails/_email.html.erb (0.8ms)
+  Rendered emails/show.js.erb (19.7ms)
+Completed 200 OK in 37ms (Views: 24.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/emails/19" for 127.0.0.1 at 2019-03-01 00:22:53 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"19"}
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:74
+  [1m[36mCACHE Email Load (0.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:18
+  [1m[36mEmail Update (0.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2019-02-28 23:22:53.404739"], ["id", 19]]
+  ↳ app/controllers/emails_controller.rb:18
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:18
+  Rendering emails/show.js.erb
+  Rendered emails/_email.html.erb (0.7ms)
+  Rendered emails/show.js.erb (2.3ms)
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 3.7ms)
+
+

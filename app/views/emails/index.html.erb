@@ -15,8 +15,9 @@
         </thead>
         <tbody>
           <% @emails.each do |email| %>
-            <tr>
-              <td>
+          <tr id="email_<%=email.id%>">
+            <td>
+              <%= link_to email_path(email), :remote => true do %>
                 <span id="enveloppe_<%= email.id %>">
                 <% if email.read == true %>
                   <i class="fas fa-envelope-open"></i>
@@ -24,27 +25,20 @@
                   <i class="fas fa-envelope"></i>
                 <% end %>
                 </span>
-                <%= link_to email_path(email), remote: true do %>
                 <%= email.object %>
               <% end %>
-
-              </td>
-              <td>
-                <%= link_to edit_email_path(email) do %>
-                  <i class="fas fa-edit text-info"></i>
-                <% end %>
-              </td>
-              <td>
-                <%= link_to email, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'delete' do %>
-                  <i class="fas fa-trash-alt text-danger"></i>
-                <% end %>
-              </td>
-            </tr>
+            </td>
+            <td>
+              <%= link_to edit_email_path(email) do %>
+              <i class="fas fa-edit text-info"></i>
+              <% end %>
+            </td>
+          </tr>
           <% end %>
         </tbody>
       </table>
     </div>
-    <div class="col-8 border" id="email-body">
+    <div class="col-8 border" id="email">
       <!-- body des emails à afficher ici -->
     </div>
   </div>
