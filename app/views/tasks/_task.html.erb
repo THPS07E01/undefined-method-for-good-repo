@@ -1,0 +1,9 @@
+<li>
+  <%= task.content  %>
+  <% unless task.deadline.nil? %>
+    , à faire avant : <%= task.deadline.strftime('%D')  %>
+  <% end %>
+  <%= link_to task, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete' do %>
+    <i class="fas fa-trash-alt text-danger"></i>
+  <% end %>
+</li>
